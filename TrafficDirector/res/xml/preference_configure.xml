@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="Remote Proxy Setting">
+        <EditTextPreference android:title="Remote IP" android:summary="192.168.137.101" android:key="REMOTE_IP_EDITTEXTPREFERENCE"/>
+        <EditTextPreference android:title="Remote Port" android:summary="12345" android:key="REMOTE_PORT_EDITTEXTPREFERENCE"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Strategy Setting">
+        <RingtonePreference android:summary="Always Compress" android:title="chose your compression mode"/>
+    </PreferenceCategory>
+    
+
+</PreferenceScreen>
