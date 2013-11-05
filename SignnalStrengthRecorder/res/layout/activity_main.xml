@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/SignalShowView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Signal Strength: " />
+
+    <Button
+        android:id="@+id/StartRecorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/SignalShowView"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/SignalView"
+        android:text="StartRecorder" />
+
+    <Button
+        android:id="@+id/StopRecorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/StartRecorder"
+        android:layout_alignRight="@+id/StartRecorder"
+        android:layout_below="@+id/StartRecorder"
+        android:text="StopRecorder" />
+
+    <TextView
+        android:id="@+id/SignalView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/StartRecorder"
+        android:layout_below="@+id/SignalShowView"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="14dp" />
+
+    <Button
+        android:id="@+id/DeleteLogFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/StopRecorder"
+        android:layout_alignRight="@+id/StopRecorder"
+        android:layout_below="@+id/StopRecorder"
+        android:text="Delete Log File" />
+
+    <Button
+        android:id="@+id/ShowSignalStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/DeleteLogFile"
+        android:layout_alignRight="@+id/DeleteLogFile"
+        android:layout_below="@+id/DeleteLogFile"
+        android:text="Show Signal Strength" />
+
+</RelativeLayout>

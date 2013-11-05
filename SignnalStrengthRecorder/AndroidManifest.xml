@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.example.signnalstrengthrecorder" android:versionCode="1"
+	android:versionName="1.0">
+
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17" />
+
+	
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+	<application android:allowBackup="true"
+		android:allowClearUserData="false" android:icon="@drawable/ic_launcher"
+		android:killAfterRestore="false" android:label="@string/app_name"
+		android:persistent="true" android:theme="@style/AppTheme">
+		<activity android:name="com.example.signnalstrengthrecorder.MainActivity"
+			android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		
+		<activity android:name = "org.achartengine.GraphicalActivity" />
+		
+		
+		<service android:name="RecorderService">
+			<intent-filter>
+				<action android:name="com.example.signalstrengthrecorder.RecorderService" />
+			</intent-filter>
+		</service>
+
+		<receiver android:name="RecallRecorder">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+
+
+				<category android:name="android.intent.category.HOME" />
+
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.PACKAGE_RESTARTED" />
+
+
+				<category android:name="android.intent.category.LAUNCHER" />
+
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.USER_PRESENT" />
+
+
+				<category android:name="android.intent.category.LAUNCHER" />
+
+			</intent-filter>
+		</receiver>
+	</application>
+
+</manifest>
