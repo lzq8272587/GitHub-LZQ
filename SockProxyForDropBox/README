@@ -1,0 +1,8 @@
+Nov.6
+
+这个Project中的sck1代表的是，维护代理和应用的那个Socket，sck2代表的是，维护代理和目标服务器的那个Socket。
+
+
+每一个TCP连接进来时，首先会创建一个SocksV5Handler线程，进行一些初始化操作；然后会另开2个DataIncomeMoniter线程，
+其作用为从一个Socket中读取数据，写入另一个Socket中（这2个线程分别负责上行流量和下行流量）。SocksV5Handler的另一个功能就是每隔一段时间检查DataIncomeMoniter线程是否活着
+如果已经结束了，那么就应该结束2个线程，释放资源。
