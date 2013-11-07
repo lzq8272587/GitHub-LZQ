@@ -28,7 +28,7 @@ public class Test {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//System.out.println(FileSystemView.getFileSystemView().getHomeDirectory().getAbsolutePath()+"\\Connection Info-"+new Date().toString().replace(" ", "_"));
+		    System.out.println(FileSystemView.getFileSystemView().getHomeDirectory().getAbsolutePath()+"\\Connection Info-"+new Date().toString().replace(" ", "_"));
 			new SocksV5Server(1080).start();
 	}
 
